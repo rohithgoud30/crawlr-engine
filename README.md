@@ -19,6 +19,16 @@ The crawler connects to the following API server:
 - **Terms of Service Endpoint**: `/api/v1/crawl-tos`
 - **Privacy Policy Endpoint**: `/api/v1/crawl-pp`
 
+### API Key Validation
+
+The server requires a valid API key for authentication:
+
+- All requests must include a valid `X-API-KEY` header
+- You must request an API key from the administrator
+- The API key validates your project's access to the crawling service
+- API keys have rate limits and usage quotas
+- Invalid API keys will result in 401 Unauthorized responses
+
 ## Setup
 
 1.  **Create and Activate Virtual Environment:**
