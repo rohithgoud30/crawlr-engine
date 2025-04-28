@@ -2,10 +2,6 @@
 
 A Jupyter Notebook script to crawl websites from the Majestic Million list and call API endpoints to find Terms of Service and Privacy Policy pages.
 
-## Related Projects
-
-This crawler engine is part of the xapAI project ecosystem, designed to help identify and process legal documents on websites.
-
 ## Features
 
 - Downloads Majestic Million CSV.
@@ -22,6 +18,7 @@ The crawler connects to the following API server:
 - **Server URL**: `https://crwlr-server-662250507742.us-east4.run.app`
 - **Terms of Service Endpoint**: `/api/v1/crawl-tos`
 - **Privacy Policy Endpoint**: `/api/v1/crawl-pp`
+- **API Key Requirement**: The server requires an API key for authentication (`X_API_KEY` header). Contact the project administrator to obtain your API key.
 
 ## Setup
 
@@ -50,7 +47,7 @@ The crawler connects to the following API server:
 
     ```
     # API Configuration
-    X_API_KEY=your_api_key_here
+    X_API_KEY=your_api_key_here  # Replace with your actual API key from the project admin
 
     # Endpoints
     TOS_ENDPOINT=https://crwlr-server-662250507742.us-east4.run.app/api/v1/crawl-tos
@@ -60,6 +57,8 @@ The crawler connects to the following API server:
     TIMEOUT=10
     DELAY_BETWEEN_REQUESTS=1
     ```
+
+    > **Note**: The `X_API_KEY` is required for authentication with the CRWLR server. Without a valid API key, the requests will be rejected with a 401 Unauthorized error. Please refer to the project documentation or contact the project administrator to obtain a valid API key.
 
 4.  **Run Jupyter Notebook:**
     ```bash
