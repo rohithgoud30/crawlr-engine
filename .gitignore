@@ -10,7 +10,6 @@ venv/
 # Data and state files
 *.csv
 *.pkl
-*.json
 
 # Logs
 *.log
